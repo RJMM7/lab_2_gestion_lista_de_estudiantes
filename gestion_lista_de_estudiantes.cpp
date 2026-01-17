@@ -26,7 +26,7 @@ public:
 
 
 class Nodo{ 
-
+    // Punteros para enlazar los nodos de la lista
     public:
     Estudiante estudiante;
     Nodo* siguiente;
@@ -73,14 +73,14 @@ class ListaEnlazada {
 
 
     void imprimirLista() {
-
+        // Imprimir toda la lista
         Nodo* actual = head;
         while(actual!=nullptr) {
             actual->estudiante.imprimir();
             actual = actual ->siguiente;
         }
     }
-
+    // Calcula el promedio usando recursividad
      float calcularPromedioRecursivo() {
         int total = contarNodosRecursivo(head);
         if (total == 0) return 0;
